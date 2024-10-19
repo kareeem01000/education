@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كيمو بيتعلم</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            direction: rtl;
+            background-color: #eaeaea;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2, h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .course {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .course:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .course img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .button {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #00509e;
+        }
+
+        .contact {
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #00509e;
+        }
+
+        .footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            background-color: #003366;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        .menu.active {
+            display: flex;
+        }
+
+        .menu a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu a:hover {
+            background-color: #00509e;
+        }
+
+        /* Responsive Styles for Mobile */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .courses {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">كيمو بيتعلم <span>📚</span></div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="menu">
+            <a href="#"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+            <a href="#"><i class="fas fa-book"></i> الدورات</a>
+            <a href="#"><i class="fas fa-envelope"></i> تواصل معنا</a>
+            <a href="#"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>مرحباً بكم في كيمو بيتعلم! 🎓</h1>
+        <p>نقدم لكم مجموعة متميزة من الدورات التدريبية عبر الإنترنت، لتطوير مهاراتكم وتحقيق أهدافكم.</p>
+
+        <div class="courses">
+            <div class="course">
+                <img src="course1.jpg" alt="دورة 1">
+                <h3>دورة تعلم البرمجة</h3>
+                <p>تعلم أساسيات البرمجة من الصفر.</p>
+                <a href="#" class="button">التسجيل</a>
+            </div>
+            <div class="course">
+                <img src="course2.jpg" alt="دورة 2">
+                <h3>دورة تصميم المواقع</h3>
+                <p>كون موقعك الالكتروني الخاص.</p>
+                <a href="#" class="button">التسجيل</a>
+            </div>
+            <div class="course">
+                <img src="course3.jpg" alt="دورة 3">
+                <h3>دورة التسويق الرقمي</h3>
+                <p>إتقان فن التسويق عبر الإنترنت.</p>
+                <a href="#" class="button">التسجيل</a>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>تواصل معنا</h2>
+            <form class="contact-form" action="mailto:kareeem01000@gmail.com" method="post" enctype="text/plain">
+                <label for="name">اسمك:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">رسالتك:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">إرسال الرسالة</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>جميع الحقوق محفوظة &copy; 2024 كيمو بيتعلم</p>
+            <p>للتواصل عبر واتساب: <a href="https://wa.me/201000889309" style="color: #ffd700;">+201000889309</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
+
